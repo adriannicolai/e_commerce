@@ -8,9 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
+    <%= javascript_include_tag "#{params['controller']}_#{params['action']}" if @is_js_available %>
   </head>
 
   <body>
+    <%= render partial: "global/navbar" %>
     <%= yield %>
   </body>
 </html>
