@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    resources :users, only: [:create, :update]
+    resources :users, only: [:create, :update] do
+      collection do
+        post :authenticate_user
+      end
+    end
   end
 
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
   root "shop#index"
 end
