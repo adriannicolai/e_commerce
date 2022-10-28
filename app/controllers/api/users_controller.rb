@@ -3,7 +3,11 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    @error_object = @user.errors.messages unless @user.save
+    if @user.save
+      helpers.set_user_session(@user)
+    else
+      @error_object = @user.errors.messages
+    end
   end
 
   def update
