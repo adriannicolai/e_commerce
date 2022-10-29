@@ -69,6 +69,8 @@ group :development do
   # gem "spring"
 
   gem "erb-formatter" # Formatter for erb files
+
+  gem "figaro" # for yml files
 end
 
 group :test do
