@@ -5,6 +5,7 @@ if @error_object.blank?
 		json.first_name @user.first_name
 		json.last_name @user.last_name
 		json.email @user.email
+		json.user_level @user.user_level
 	end
 else
 	json.status false

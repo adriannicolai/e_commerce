@@ -5,5 +5,6 @@ module Api::UsersHelper
 		session[:user][:first_name] = user.first_name
 		session[:user][:last_name]  = user.last_name
 		session[:user][:email]	    = user.email
+		session[:user][:user_level] = user.user_level
 	end
 end
