@@ -7,4 +7,7 @@ class AdminController < ApplicationController
 
   def orders
   end
+
+  def products
+  end
 end
