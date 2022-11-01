@@ -1,0 +1,45 @@
+<div class="row">
+  <%= render partial: "admin/partials/admin_navigations" %>
+  <div class="col-10">
+    <table class="table caption-top">
+      <caption>List of products</caption>
+      <thead>
+        <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">1</td>
+          <td>
+						<img src="https://st.depositphotos.com/1000128/2642/i/450/depositphotos_26429241-stock-photo-desktop-computer-with-touchscreen-interface.jpg" width="40 " height="40">
+					</td>
+          <td>Otto</td>
+          <td>Otto</td>
+          <td>
+            <div class="row">
+              <div class="col-3">
+                <button type="button" class="btn btn-outline-secondary">Edit</button>
+              </div>
+              <div class="col-3">
+							<button type="button" class="btn btn-outline-danger">Delete</button></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <nav aria-label="...">
+      <ul class="pagination pagination-sm">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
