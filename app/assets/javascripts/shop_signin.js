@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     /* On user signin */
     $("#signin_button").on("click", (e) => {
         e.preventDefault();

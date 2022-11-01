@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :check_logged_in?
+
   def index
   end
 
@@ -6,6 +8,10 @@ class UsersController < ApplicationController
   end
 
   def update
+  end
+
+  def profile
+    @user = User.find_by(id: session[:user]["user_id"])
   end
 
   def signout

@@ -11,4 +11,14 @@ class ApplicationController < ActionController::Base
 		file = File.join(Rails.root, "app", "assets", "javascripts", "#{params['controller']}_#{params['action']}.js")
 		@is_js_available = File.exists?(file)
 	end
+
+	# Redirect to home page if logged in
+	def redirect_to_home_if_logged_in?
+		redirect_to "/" if session[:user].present?
+	end
+
+	# Redirect to home if not logged in
+	def check_logged_in?
+		redirect_to "/" if session[:user].nil?
+	end
 end
