@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :admin, only: [:index] do
     collection do
       get :dashboard
+      get :orders
     end
   end
 

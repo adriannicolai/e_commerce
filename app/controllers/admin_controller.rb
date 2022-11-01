@@ -4,4 +4,7 @@ class AdminController < ApplicationController
 
   def dashboard
   end
+
+  def orders
+  end
 end
