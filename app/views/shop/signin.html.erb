@@ -1,0 +1,65 @@
+<%# https://bbbootstrap.com/snippets/bootstrap-5-login-form-side-images-71555323 credits here %>
+<form action="/api/users/authenticate_user" method="POST" id="signin_form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="h-100 justify-content-center align-items-center">
+          <div class="py-4 px-3">
+            <h4>Sign in</h4>
+            <div class="row mt-2">
+              <div class="col-md-12">
+                <div class="input-field">
+                  <input class="form-control" name="email" required>
+                  <label for="email">Email</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2 mb-2">
+              <div class="col-md-12">
+                <div class="input-field">
+                  <input class="form-control" name="password" required>
+                  <label for="password">Password</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-12">
+                <button class="btn btn-primary w-100 signup-button" id="signin_button">Sign In</button>
+              </div>
+            </div>
+            <div class="member mt-1">
+              <span>Don't have an account?</span>
+              <a class="text-decoration-none" href="/shop/signup">Signup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="right-side-content">
+
+          <div class="right-side">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span><img src="https://i.imgur.com/kWmyZvb.jpg">
+            </span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>
+              <img src="https://i.imgur.com/U0863iD.jpg">
+            </span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallelogram">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</form>

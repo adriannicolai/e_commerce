@@ -7,4 +7,9 @@ class UsersController < ApplicationController
 
   def update
   end
+
+  def signout
+    session.destroy
+    redirect_to "/"
+  end
 end

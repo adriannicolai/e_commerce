@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
 
   root "shop#index"
+  get "signout" => "users#signout"
 end

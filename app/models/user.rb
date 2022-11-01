@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
     # Validate first name and last name
     validates_with UserRegistrationValidator
+
+    enum user_level: %w[admin user]
 end

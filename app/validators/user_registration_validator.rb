@@ -1,7 +1,7 @@
 class UserRegistrationValidator < ActiveModel::Validator
-	def validate(user)
-		user.errors.add(:first_name, "special characters are not allowed in first name") if validate_name(user.first_name)
-		user.errors.add(:last_name, "special characters are not allowed in last name") if validate_name(user.last_name)
+	def validate(record)
+		record.errors.add(:first_name, "special characters are not allowed in first name") if validate_name(record.first_name)
+		record.errors.add(:last_name, "special characters are not allowed in last name") if validate_name(record.last_name)
 	end
 
 	# Check if there is a special character present
