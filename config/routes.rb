@@ -14,6 +14,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    # User session[:user]["user_id"] as user id
+    member do
+      get :profile
+      get :orders
+    end
+  end
+
+  resources :admin, only: [:index] do
+    collection do
+      get :dashboard
+    end
+  end
+
   root "shop#index"
   get "signout" => "users#signout"
 end

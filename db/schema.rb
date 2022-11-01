@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_29_000924) do
     t.date "birthday"
     t.string "email"
     t.string "password"
-    t.string "user_level", default: "1"
+    t.integer "user_level", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
