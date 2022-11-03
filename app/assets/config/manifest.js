@@ -7,6 +7,7 @@
 //= link shop_signup.css
 //= link users_profile.css
 //= link admin_index.css
+//= link products_index.css
 
 /* JS */
 //= link shop_index.js
