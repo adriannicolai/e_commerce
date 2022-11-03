@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :api, defaults: { format: :json } do
+  namespace :api do
     resources :users, only: [:create, :update] do
       collection do
         post :authenticate_user
