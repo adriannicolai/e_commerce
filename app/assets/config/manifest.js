@@ -8,6 +8,7 @@
 //= link users_profile.css
 //= link admin_index.css
 //= link products_index.css
+//= link users_addresses.css
 
 /* JS */
 //= link shop_index.js
