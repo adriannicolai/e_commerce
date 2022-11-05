@@ -12,6 +12,8 @@ Rails.application.routes.draw do
         post :authenticate_user
       end
     end
+
+    resources :addresses, only: [:create]
   end
 
   resources :users, only: [:index] do
