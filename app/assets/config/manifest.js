@@ -15,3 +15,4 @@
 //= link shop_signin.js
 //= link shop_signup.js
 //= link users_profile.js
+//= link users_addresses.js
