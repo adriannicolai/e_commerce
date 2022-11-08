@@ -6,4 +6,7 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
+import { Turbo } from "@hotwired/turbo-rails"
+Turbo.session.drive = false
+
 export { application }
