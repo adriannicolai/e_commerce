@@ -12,6 +12,8 @@ Rails.application.routes.draw do
         post :authenticate_user
       end
     end
+
+    resources :addresses, only: [:create]
   end
 
   resources :users, only: [:index] do
@@ -25,9 +27,9 @@ Rails.application.routes.draw do
 
   resources :admin, only: [:index] do
     collection do
+      resources :products, only: [:index, :new]
       get :dashboard
       get :orders
-      get :products
     end
   end
 

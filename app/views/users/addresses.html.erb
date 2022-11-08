@@ -1,5 +1,14 @@
 <div class="row">
   <%= render partial: "users/partials/profile_navigation" %>
   <div class="col-10">
+    <div class="address_heading">
+      <h2>Addresses</h2>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_address_modal">Add Address</button>
+    </div>
+    <div class="address_card">
+    </div>
   </div>
 </div>
+
+<%# modals %>
+<%= render partial: "users/modals/add_address_modal" %>

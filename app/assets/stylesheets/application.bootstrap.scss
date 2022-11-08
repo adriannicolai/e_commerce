@@ -1,2 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.list-group-item {
+    text-decoration: none;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

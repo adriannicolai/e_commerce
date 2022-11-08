@@ -1,0 +1,24 @@
+section.products_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+
+	h1 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	a {
+		background: none;
+		outline: 1px solid green;
+		color: green;
+		border-radius: 5px;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+	a:hover{
+		background: green;
+		color: white;
+	}
+}
