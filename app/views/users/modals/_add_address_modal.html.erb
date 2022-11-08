@@ -1,24 +1,25 @@
 <!-- Modal -->
-<div class="modal fade" id="add_address_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New Address</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="/address">
+<form action="/api/addresses" method="POST" id="create_address_form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="modal fade" id="add_address_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Address</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
           <div class="row g-2 mt-1">
             <div class="col-md-6">
               <div class="input-field">
                 <label">Full Name</label>
-                  <input class="form-control" name="addresses[first_name]" required>
+                  <input class="form-control" name="addresses[full_name]" required>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-field">
                 <label">Phone number</label>
-                  <input class="form-control" name="addresses[last_name]" required>
+                  <input class="form-control" name="addresses[phone_number]" required>
               </div>
             </div>
           </div>
@@ -34,7 +35,7 @@
             <div class="col-md-12">
               <div class="input-field">
                 <label>City</label>
-                <input class="form-control" name="addresses[City]" required>
+                <input class="form-control" name="addresses[city]" required>
               </div>
             </div>
           </div>
@@ -54,12 +55,13 @@
             <input class="form-check-input" type="checkbox" name="address[is_default]" id="is_default">
             <label class="form-check-label" for="is_default">Make default address</label>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</form>
