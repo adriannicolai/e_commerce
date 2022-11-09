@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				$("#add_address_modal").modal("hide");
 			}
 		});
+
+		create_address_form.trigger("reset");
 	});
+
 	/* Set the address route for deletion */
 	$(".delete_address").on("click", function (e) {
 		e.preventDefault();
@@ -21,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		let address_id = $(this).closest(".address_card").data("address_id");
 		$("#delete_address_form").attr("action", `/api/addresses/${address_id}`);
 	});
+
 	/* Delete the address */
 	$("#confirm_delete_address_button").on("click", function() {
 		let delete_address_form = $("#delete_address_form");
