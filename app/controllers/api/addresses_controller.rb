@@ -12,6 +12,16 @@ class Api::AddressesController < ApplicationController
     end
   end
 
+  def destroy
+    @address = Address.find_by(user_id: session[:user]["user_id"], id: params[:id])
+
+    if @address.present?
+      @error_object.errors = @address.errors unless @address.destroy
+    else
+      @error_object = {address: "Address not found"}
+    end
+  end
+
   private
   def address_params
     params.require(:addresses).permit(:full_name, :phone_number, :province, :city, :detailed_address, :is_billing, :is_default)
