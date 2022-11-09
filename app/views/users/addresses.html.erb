@@ -1,14 +1,23 @@
 <div class="row">
   <%= render partial: "users/partials/profile_navigation" %>
-  <div class="col-10">
-    <div class="address_heading">
-      <h2>Addresses</h2>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_address_modal">Add Address</button>
+    <div class="col-10">
+      <div class="address_heading">
+        <h2>Addresses</h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_address_modal">Add Address</button>
+      </div>
+      <div class="addresses_list">
+        <div class="row">
+          <% if @addresses.length > 1  %>
+            <% @addresses.each do |address| %>
+              <%= render partial: "users/partials/user_address_card", locals: {address: address} %>
+            <% end %>
+          <% else %>
+              <p>No Address yet!</p>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="address_card">
-    </div>
-  </div>
 </div>
 
 <%# modals %>
-<%= render partial: "users/modals/add_address_modal" %>
+  <%= render partial: "users/modals/add_address_modal" %>
