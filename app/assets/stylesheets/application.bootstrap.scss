@@ -2,9 +2,13 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 
 .list-group-item {
-    text-decoration: none;
-    a {
-        text-decoration: none;
-        color: black;
-    }
+	text-decoration: none;
+	a {
+			text-decoration: none;
+			color: black;
+	}
+}
+
+.d-flex {
+	align-items: center;
 }
