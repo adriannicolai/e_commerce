@@ -3,7 +3,13 @@ class Api::AddressesController < ApplicationController
     @address = Address.new(address_params)
     @address.assign_attributes(user_id: session[:user]["user_id"])
 
-    @error_object = @address.errors.messages unless @address.save
+    if @address.save
+      address_card = render_to_string partial: "users/partials/user_address_card", locals: {address: @address}
+
+      render json: {status: true, address_card: address_card}
+    else
+      @error_object = @address.errors.messages
+    end
   end
 
   private
