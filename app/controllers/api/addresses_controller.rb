@@ -22,6 +22,12 @@ class Api::AddressesController < ApplicationController
     end
   end
 
+  def show
+    @address = Address.find_by(user_id: session[:user]["user_id"], id: params[:id])
+
+    @error_object = @address.errors.messages unless @address.present?
+  end
+
   private
   def address_params
     params.require(:addresses).permit(:full_name, :phone_number, :province, :city, :detailed_address, :is_billing, :is_default)
