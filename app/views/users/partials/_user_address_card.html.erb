@@ -1,0 +1,25 @@
+<%# Credits here https://mdbootstrap.com/docs/standard/components/list-group/ %>
+<% if address.present? %>
+  <div class="col-xl-4 mb-4">
+    <div class="card address_card address_<%= address.id %>" data-address_id="<%= address.id %>">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <div class="ms-3">
+              <p class="fw-bold mb-1"> <%= address.full_name.titleize %> </p>
+              <p class="text-muted mb-0"><%= address.phone_number %></p>
+              <p class="text-muted mb-0"><%= address.detailed_address %></p>
+              <p class="text-muted mb-0"><%= address.province %>, <%= address.city %> </p>
+            </div>
+          </div>
+          <span class="badge rounded-pill badge-success">Active</span>
+        </div>
+      </div>
+      <div class="card-footer border-0 bg-light p-2 d-flex justify-content-around address_card_footer">
+        <a class="btn btn-link m-0 text-reset update_address" href="#" role="button" data-ripple-color="primary">Update</a>
+        <a class="btn btn-link m-0 text-reset delete_address" href="#" role="button" data-ripple-color="primary">Delete</a>
+        <a class="btn btn-link m-0 text-reset set_default_address" href="#" role="button" data-ripple-color="primary">Set as default address</a>
+      </div>
+    </div>
+  </div>
+<% end %>

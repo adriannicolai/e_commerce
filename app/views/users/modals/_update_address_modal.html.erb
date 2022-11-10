@@ -1,7 +1,8 @@
 <!-- Modal -->
-<form action="/api/addresses" method="POST" id="create_address_form">
+<form action="/api/addresses" method="POST" id="update_address_form">
+  <input type="hidden" name="_method" value="patch">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <div class="modal fade" id="add_address_modal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="update_address_modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -13,13 +14,13 @@
             <div class="col-md-6">
               <div class="input-field">
                 <label">Full Name</label>
-                  <input class="form-control" name="addresses[full_name]" required>
+                  <input class="form-control" name="addresses[full_name]" id="update_full_name" required>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-field">
                 <label">Phone number</label>
-                  <input class="form-control" name="addresses[phone_number]" required>
+                  <input class="form-control" name="addresses[phone_number]" id="update_phone_number" required>
               </div>
             </div>
           </div>
@@ -27,7 +28,7 @@
             <div class="col-md-12">
               <div class="input-field">
                 <label>Province/State</label>
-                <input class="form-control" name="addresses[province]" required>
+                <input class="form-control" name="addresses[province]" id="update_province" required>
               </div>
             </div>
           </div>
@@ -35,7 +36,7 @@
             <div class="col-md-12">
               <div class="input-field">
                 <label>City</label>
-                <input class="form-control" name="addresses[city]" required>
+                <input class="form-control" name="addresses[city]" id="update_city" required>
               </div>
             </div>
           </div>
@@ -43,16 +44,16 @@
             <div class="col-md-12">
               <div class="input-field">
                 <label>Detailed Address</label>
-                <input class="form-control" name="addresses[detailed_address]" required>
+                <input class="form-control" name="addresses[detailed_address]" id="update_detailed_address" required>
               </div>
             </div>
           </div>
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" name="addresses[is_billing]" id="is_billing">
+            <input class="form-check-input" type="checkbox" name="addresses[is_billing]" id="update_is_billing">
             <label class="form-check-label" for="is_billing">Make billing address</label>
           </div>
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" name="addresses[is_default]" id="is_default">
+            <input class="form-check-input" type="checkbox" name="addresses[is_default]" checked="checked" id="update_is_default">
             <label class="form-check-label" for="is_default">Make default address</label>
           </div>
 

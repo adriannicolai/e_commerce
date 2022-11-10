@@ -10,4 +10,12 @@ class User < ApplicationRecord
 	enum user_level: %w[admin user]
 
 	has_many :addresses
+
+	before_save :downcase_email
+	before_update :downcase_email
+
+	private
+	def downcase_email
+		self.email.downcase!
+	end
 end

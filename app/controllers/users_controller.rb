@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   end
 
   def addresses
+    @addresses = User.find_by(id: session[:user]["user_id"]).addresses
   end
 
   def signout

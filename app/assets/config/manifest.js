@@ -8,9 +8,11 @@
 //= link users_profile.css
 //= link admin_index.css
 //= link products_index.css
+//= link users_addresses.css
 
 /* JS */
 //= link shop_index.js
 //= link shop_signin.js
 //= link shop_signup.js
 //= link users_profile.js
+//= link users_addresses.js
