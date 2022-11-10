@@ -44,13 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	/* Copy the value from the selected card to the modal for updating */
-	$(".update_address").on("click", function () {
+	$(document).on("click", ".address_card_footer .update_address", function () {
 		let address_id = $(this).closest(".address_card").data("address_id");
 
 		/* Fetch the address details and get the address details */
 		$.get(`/api/addresses/${address_id}`, function (fetch_address_response) {
 			if (fetch_address_response.status) {
-				console.log('fetch_address_response :>> ', fetch_address_response);
 				/* Destructure the address details */
 				let { id, user_id, full_name, phone_number, province, city, detailed_address, is_billing, is_default } = fetch_address_response;
 
