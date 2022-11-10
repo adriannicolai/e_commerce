@@ -7,6 +7,8 @@ if @error_object.blank?
   json.city @address.city
   json.detailed_address @address.detailed_address
   json.phone_number @address.phone_number
+  json.is_billing @address.is_billing
+  json.is_default @address.is_default
 else
   json.status false
   json.error_object @error_object
