@@ -6,7 +6,7 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_address_modal">Add Address</button>
       </div>
       <div class="addresses_list row" id="addresses_list">
-        <% if @addresses.length > 1  %>
+        <% if @addresses.length > 0 %>
           <% @addresses.each do |address| %>
             <%= render partial: "users/partials/user_address_card", locals: {address: address} %>
           <% end %>
@@ -19,4 +19,5 @@
 
 <%# modals %>
 <%= render partial: "users/modals/add_address_modal" %>
-<%= render partial: "users/modals/delete_address_moda" %>
+<%= render partial: "users/modals/delete_address_modal" %>
+<%= render partial: "users/modals/update_address_modal" %>
