@@ -30,6 +30,12 @@ gem "cssbundling-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# AWS SDK  -s3
+gem 'aws-sdk-s3', '~> 1.0'
+
+# all of aws sdk
+# gem 'aws-sdk', '~> 3'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
