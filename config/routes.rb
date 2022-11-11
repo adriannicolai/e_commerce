@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :addresses, only: [:show, :create, :destroy]
+    resources :addresses, only: [:show, :create, :update, :destroy]
   end
 
   resources :users, only: [:index] do
