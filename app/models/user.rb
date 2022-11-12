@@ -11,11 +11,16 @@ class User < ApplicationRecord
 
 	has_many :addresses
 
-	before_save :downcase_email
-	before_update :downcase_email
+	before_save :downcase_email, :titleize_name
+	before_update :downcase_email, :titleize_name
 
 	private
 	def downcase_email
 		self.email.downcase!
+	end
+
+	def titleize_name
+		self.first_name.titleize
+		self.last_name.titleize
 	end
 end
