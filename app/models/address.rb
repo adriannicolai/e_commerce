@@ -16,6 +16,14 @@ class Address < ApplicationRecord
   before_create :set_default_billing_and_address
   before_update :check_if_default_address_and_billing_changed
 
+  before_save :titleize_full_name
+	before_update :titleize_full_name
+
+	private
+	def titleize_full_name
+    self.full_name = self.full_name.titleize
+	end
+
   def set_default_billing_and_address
     Address.where(user_id: self.user_id).update_all(is_billing: false) if self.is_billing.present?
     Address.where(user_id: self.user_id).update_all(is_default: false) if self.is_default.present?
@@ -24,6 +32,6 @@ class Address < ApplicationRecord
   def check_if_default_address_and_billing_changed
     Address.where(user_id: self.user_id).update_all(is_billing: false) if self.is_billing_changed?
     Address.where(user_id: self.user_id).update_all(is_default: false) if self.is_default_changed?
-
   end
+
 end
