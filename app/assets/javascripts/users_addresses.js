@@ -65,7 +65,7 @@ function triggerUpdateAddressModal() {
 	$.get(address_url, function (fetch_address_response) {
 		if (fetch_address_response.status) {
 			/* Destructure the address details */
-			let { id, user_id, full_name, phone_number, province, city, detailed_address, is_billing, is_default } = fetch_address_response;
+			let { full_name, phone_number, province, city, detailed_address, is_billing, is_default } = fetch_address_response;
 
 			/* Add the address details to the modal */
 			let update_address_form = $("#update_address_form");
@@ -74,7 +74,6 @@ function triggerUpdateAddressModal() {
 			update_address_form.find("#update_phone_number").val(phone_number);
 			update_address_form.find("#update_province").val(province);
 			update_address_form.find("#update_city").val(city);
-			update_address_form.find("#update_detailed_address").val(detailed_address);
 			update_address_form.find("#update_detailed_address").val(detailed_address);
 			update_address_form.find("#update_is_billing").prop("checked", is_billing);
 			update_address_form.find("#update_is_default").prop("checked", is_default);
@@ -93,6 +92,18 @@ function submitUpdateAddressForm(e){
 
 	$.post(update_address_form.attr("action"), update_address_form.serialize(), function(update_address_form_response){
 		if (update_address_form_response.status){
+			/* Destructure the update_address_form_response */
+			let { id, user_id, full_name, phone_number, province, city, detailed_address, is_billing, is_default } = update_address_form_response;
+
+			/* Update the DOM */
+			let address_card = $(`.address_${id}`);
+			console.log('full_name :>> ', full_name);
+			address_card.find(".full_name").text(full_name);
+			address_card.find(".phone_number").text(phone_number);
+			address_card.find(".detailed_address").text(detailed_address);
+			address_card.find("province_and_city").text(`${province}, ${city}`);
+
+			/* Hide modal and show toast message */
 			$("#update_address_modal").modal("hide");
 			$("#app_toast").toast("show");
 		}
