@@ -28,6 +28,19 @@ class Api::AddressesController < ApplicationController
     @error_object = @address.errors.messages unless @address.present?
   end
 
+  def update
+    @address = Address.find_by(user_id: session[:user]["user_id"], id: params[:id])
+
+    if @address.present?
+      @address.assign_attributes(address_params)
+      @address.assign_attributes(is_billing: address_params["is_billing"].present?)
+      @address.assign_attributes(is_default: address_params["is_default"].present?)
+      @error_object = @address.errors.messages unless @address.save!
+    else
+      @error_object = {address: "Address not found"}
+    end
+  end
+
   private
   def address_params
     params.require(:addresses).permit(:full_name, :phone_number, :province, :city, :detailed_address, :is_billing, :is_default)

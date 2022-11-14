@@ -14,19 +14,24 @@ class Address < ApplicationRecord
 
   # Validate the default billing and default address to only be one
   before_create :set_default_billing_and_address
-  before_update :set_default_billing_and_address
+  before_update :check_if_default_address_and_billing_changed
+
+  before_save :titleize_full_name
+	before_update :titleize_full_name
+
+	private
+	def titleize_full_name
+    self.full_name = self.full_name.titleize
+	end
 
   def set_default_billing_and_address
-    if self.is_billing.nil?
-      self.is_billing = false
-    else
-      Address.where(user_id: self.user_id).update_all(is_billing: false)
-    end
-
-    if self.is_default.nil?
-      self.is_default = false
-    else
-      Address.where(user_id: self.user_id).update_all(is_default: false)
-    end
+    Address.where(user_id: self.user_id).update_all(is_billing: false) if self.is_billing.present?
+    Address.where(user_id: self.user_id).update_all(is_default: false) if self.is_default.present?
   end
+
+  def check_if_default_address_and_billing_changed
+    Address.where(user_id: self.user_id).update_all(is_billing: false) if self.is_billing_changed?
+    Address.where(user_id: self.user_id).update_all(is_default: false) if self.is_default_changed?
+  end
+
 end

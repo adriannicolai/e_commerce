@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  image_source: MyString
+  is_cover: false
+
+two:
+  product: two
+  image_source: MyString
+  is_cover: false
