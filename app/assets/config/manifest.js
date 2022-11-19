@@ -9,6 +9,7 @@
 //= link admin_index.css
 //= link products_index.css
 //= link users_addresses.css
+//= link products_new.css
 
 /* JS */
 //= link shop_index.js
