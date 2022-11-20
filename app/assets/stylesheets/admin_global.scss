@@ -7,8 +7,7 @@ body {
       padding: 0px;
       height: calc(100vh - 50px);
 
-      .admin_navbar_container {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+      div.admin_navbar_container {
         height: 100%;
         width: 180px;
         background: var(--white);
@@ -16,6 +15,16 @@ body {
         ul {
           height: 100%;
           border-radius: 0px;
+          border: none;
+
+          li{
+            border: none;
+          }
+          li.active{
+            background: var(--white);
+            font-weight: 500;
+            border: none;
+          }
         }
       }
     }
@@ -37,6 +46,7 @@ body {
     display: block !important;
     min-height: 56px;
     max-height: 56px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   }
 
 
