@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECommerce</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
+    <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
+    <%= javascript_include_tag "#{params['controller']}_#{params['action']}" if @is_js_available %>
+    <%= stylesheet_link_tag "admin_global", media: 'all' %>
+  </head>
+
+  <body>
+    <%= render partial: "global/admin_navbar" %>
+    <%#= render partial: "global/toast" %>
+    <%= yield %>
+  </body>
+</html>
