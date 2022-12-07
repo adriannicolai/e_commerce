@@ -11,6 +11,7 @@
 //= link users_addresses.css
 //= link products_new.css
 //= link admin_global.css
+//= link global.css
 
 /* JS */
 //= link shop_index.js

@@ -11,7 +11,8 @@
     <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
     <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
     <%= javascript_include_tag "#{params['controller']}_#{params['action']}" if @is_js_available %>
-    <%= stylesheet_link_tag "admin_global", media: 'all' %>
+    <%= stylesheet_link_tag "global" , media: 'all' %>
+
   </head>
 
   <body>

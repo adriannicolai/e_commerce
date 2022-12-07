@@ -5,7 +5,9 @@
     </div>
     <div class="container d-flex justify-content-center mt-50 mb-50">
       <div class="row">
+      <% for a in 1..40 do %>
       <%= render partial: "shop/partials/product_card"%>
+      <% end %>
       </div>
     </div>
   </div>

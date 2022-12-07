@@ -8,36 +8,6 @@
     transition: .3s linear all;
 }
 
-.card-counter:hover {
-    box-shadow: 4px 4px 20px #DADADA;
-    transition: .3s linear all;
-}
-
-.card-counter.primary {
-    background-color: #007bff;
-    color: #FFF;
-}
-
-.card-counter.danger {
-    background-color: #ef5350;
-    color: #FFF;
-}
-
-.card-counter.success {
-    background-color: #66bb6a;
-    color: #FFF;
-}
-
-.card-counter.info {
-    background-color: #26c6da;
-    color: #FFF;
-}
-
-.card-counter i {
-    font-size: 5em;
-    opacity: 0.2;
-}
-
 .card-counter .count-numbers {
     position: absolute;
     right: 35px;
