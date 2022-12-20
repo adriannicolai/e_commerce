@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 :root {
   --black: #222;
+  --back_text: #1a1a1a;
+  --secondary_text: #088178;
   --green: #465b52;
+  --white: #E3E6F3;
 }
 
 h1 {
