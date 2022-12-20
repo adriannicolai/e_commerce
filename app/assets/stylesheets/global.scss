@@ -1,0 +1,50 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --black: #222;
+  --green: #465b52;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: var(--black);
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: var(--black);
+}
+
+h4 {
+  font-size: 20px;
+  columns: var(--black);
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--green);
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}

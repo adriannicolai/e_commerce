@@ -2,6 +2,6 @@
 //= link_tree ../builds
 
 /* CSS */
-
+//= link global.css
 
 /* JS */
