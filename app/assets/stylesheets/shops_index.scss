@@ -1,0 +1,80 @@
+body {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--back_text);
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--secondary_text);
+    }
+
+    nav ul li a.active::after,
+    nav ul li a:hover::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background-color: var(--secondary_text);
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+  }
+
+  section.offers {
+    background-image: asset_url("offers.png"); /* TODO: move in S3 in the future*/
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section.offers h4{
+    padding-bottom: 15px;
+  }
+
+  section.offers h1{
+    color: var(--secondary_text);
+  }
+  section.offers > button {
+    background-image: asset_url("button.png"); /* TODO: move in S3 in the future*/
+    background-color: transparent;
+    color: var(--secondary_text);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}
