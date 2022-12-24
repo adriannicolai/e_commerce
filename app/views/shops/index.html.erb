@@ -39,3 +39,33 @@
       <h6 class="support">F24/7 Support</h6>
   </div>
 </section>
+
+<section class="products section-p1">
+  <h2>Featured Products</h2>
+  <p>Summer Collection: New Modern Designs</p>
+
+  <div class="product_list_container">
+      <% 9.times do %>
+      <div class="product">
+        <%= image_tag "products/f1.jpg" %>
+
+        <div class="description">
+          <span>Addidas</span>
+          <h5>Cartoon Astronaut T-Shirts</h5>
+
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+
+          <h4 class="price">$78</h4>
+        </div>
+
+        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i> </a>
+      </div>
+    <% end %>
+  </div>
+</section>
