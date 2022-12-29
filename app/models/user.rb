@@ -13,7 +13,7 @@ class User < ApplicationRecord
 	# Validate first name and last name
 	validates_with UserRegistrationValidator
 
-	enum user_level: %w[admin user]
+	enum user_level: %w[admin user], _suffix: true
 
 	has_many :addresses
 
