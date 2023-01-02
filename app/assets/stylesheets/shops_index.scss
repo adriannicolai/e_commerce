@@ -214,16 +214,10 @@ body {
   }
 
   section.banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-image: asset_url("banner/b2.jpg");
     width: 100%;
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
+    text-align: center;
+    align-items: center;
 
     h4 {
       color: var(--white);
@@ -245,4 +239,120 @@ body {
       color: var(--white);
     }
   }
+
+  section.banner,
+  section.promos div.banner_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  section.promos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    h2, h4, span {
+      color: var(--white_clear);
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 15px;
+    }
+    /* Banner background images */
+    div.deals_banner {
+      background-image: asset_url("banner/b17.jpg");
+    }
+
+    div.season_collection_banner {
+      background-image: asset_url("banner/b10.jpg");
+    }
+
+    div.banner_box {
+      align-items: flex-start;
+      min-width: 580px !important;
+      padding: 30px;
+
+      > button {
+          font-size: 13px;
+          font-weight: 600;
+          padding: 11px 18px;
+          color: var(--white_clear);
+          background-color: transparent;
+          cursor: pointer;
+          border: 1px solid var(--white_clear);;
+          outline: none;
+          transition: 0.2s;
+        }
+
+      > button:hover {
+        background-color: var(--secondary_text);
+        border: 1px solid var(--secondary_text);
+      }
+    }
+  }
+
+  section.season_sales_banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+
+    div.banner_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 30%;
+      height: 30vh;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    div.season_sale_banner {
+      background-image: asset_url("banner/b7.jpg");
+    }
+
+    div.footwear_sale_banner {
+      background-image: asset_url("banner/b4.jpg");
+    }
+
+    div.trendy_prints_banner {
+      background-image: asset_url("banner/b18.jpg");
+    }
+
+    h2 {
+      color: var(--white_clear);
+      font-weight: 900;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+    color: var(--red_text);
+    font-weight: 800;
+    font-size: 15px;
+    }
+  }
 }
+
+/* sm-banner = promos
+ banner-box = promos_box
+*/
