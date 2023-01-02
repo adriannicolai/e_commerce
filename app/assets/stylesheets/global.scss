@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 :root {
@@ -11,13 +11,16 @@
   --back_text: #1a1a1a;
   --secondary_text: #088178;
   --green: #465b52;
-  --white: #E3E6F3;
+  --white: #e3e6f3;
   --white_clear: #fff;
   --red: #ef3636;
   --red_text: #ec544e;
   --border: #cce7d0;
   --description_color: #606063;
   --product_title_color: #1a1a1a;
+  --teal_blue: #041e42;
+  --gray: #818ea0;
+  --yellow: #ffbd27;
 }
 
 h1 {
@@ -56,7 +59,11 @@ p {
   margin: 40px 0;
 }
 
-button.normal {
+.hidden {
+  display: none;
+}
+
+.normal {
   font-size: 14px;
   font-weight: 600;
   padding: 15px 30px;
@@ -71,4 +78,191 @@ button.normal {
 
 body {
   width: 100%;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #close_header_navigation {
+          display: none;
+        }
+
+        li {
+          position: relative;
+          list-style: none;
+          padding: 0 20px;
+
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--back_text);
+            transition: 0.3s ease;
+          }
+          a:hover,
+          a.active {
+            color: var(--secondary_text);
+          }
+
+          a.active::after,
+          a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background-color: var(--secondary_text);
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+          }
+        }
+      }
+      ul.active {
+        right: 0 !important;
+      }
+    }
+
+    i {
+      color: var(--back_text);
+    }
+
+    i:hover {
+      cursor: pointer;
+    }
+
+    div.mobile {
+      display: none;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div.col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      img.logo {
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-size: 13px;
+        margin: 0 0 8px 0;
+      }
+
+      a {
+        font-size: 13px;
+        text-decoration: none;
+        color: var(--black);
+        margin-bottom: 10px;
+      }
+
+      a:hover,
+      div.follow i:hover {
+        color: var(--secondary_text);
+      }
+
+      div.follow {
+        margin-top: 20px;
+
+        i {
+          color: var(--green);
+          padding-right: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    div.install {
+      div.appstore_logos {
+        display: flex;
+
+        img {
+          border: 1px solid var(--secondary_text);
+          border-radius: 6px;
+        }
+      }
+    }
+
+    img {
+      margin: 10px 0 15px 0;
+    }
+
+    div.copyright {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  header {
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--white);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+        li {
+          margin-bottom: 25px;
+        }
+
+        #header_navigation_cart_logo {
+          display: none;
+        }
+
+        #close_header_navigation {
+          display: initial !important;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          color: var(--black);
+          font-size: 24px;
+        }
+      }
+    }
+
+    div.mobile {
+      display: flex !important;
+      align-items: center;
+
+      i {
+        font-size: 24px;
+        padding-left: 20px;
+      }
+    }
+  }
 }
