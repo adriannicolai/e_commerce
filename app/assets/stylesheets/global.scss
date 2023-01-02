@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 :root {
@@ -11,7 +11,7 @@
   --back_text: #1a1a1a;
   --secondary_text: #088178;
   --green: #465b52;
-  --white: #E3E6F3;
+  --white: #e3e6f3;
   --white_clear: #fff;
   --red: #ef3636;
   --red_text: #ec544e;
@@ -74,4 +74,122 @@ p {
 
 body {
   width: 100%;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--back_text);
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--secondary_text);
+    }
+
+    nav ul li a.active::after,
+    nav ul li a:hover::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background-color: var(--secondary_text);
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div.col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      img.logo {
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-size: 13px;
+        margin: 0 0 8px 0;
+      }
+
+      a {
+        font-size: 13px;
+        text-decoration: none;
+        color: var(--black);
+        margin-bottom: 10px;
+      }
+
+      a:hover,
+      div.follow i:hover{
+        color: var(--secondary_text);
+      }
+
+      div.follow {
+        margin-top: 20px;
+
+        i {
+          color: var(--green);
+          padding-right: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    div.install {
+      div.appstore_logos {
+        display: flex;
+
+        img {
+          border: 1px solid var(--secondary_text);
+          border-radius: 6px;
+        }
+      }
+    }
+
+    img {
+      margin: 10px 0 15px 0;
+    }
+
+    div.copyright {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
