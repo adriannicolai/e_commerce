@@ -252,7 +252,7 @@ body {
 
   section.promos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     h2, h4, span {
@@ -304,6 +304,51 @@ body {
         background-color: var(--secondary_text);
         border: 1px solid var(--secondary_text);
       }
+    }
+  }
+
+  section.season_sales_banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+
+    div.banner_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 30%;
+      height: 30vh;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    div.season_sale_banner {
+      background-image: asset_url("banner/b7.jpg");
+    }
+
+    div.footwear_sale_banner {
+      background-image: asset_url("banner/b4.jpg");
+    }
+
+    div.trendy_prints_banner {
+      background-image: asset_url("banner/b18.jpg");
+    }
+
+    h2 {
+      color: var(--white_clear);
+      font-weight: 900;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+    color: var(--red_text);
+    font-weight: 800;
+    font-size: 15px;
     }
   }
 }
