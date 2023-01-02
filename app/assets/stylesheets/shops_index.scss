@@ -360,7 +360,7 @@ body {
 
 @media (max-width: 850px) {
   .section-p1 {
-    padding: 40px 40px !important;
+    padding: 40px !important;
   }
 
   body {
@@ -414,6 +414,68 @@ body {
     section.newsletter {
       form {
         width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 477px) {
+  .section-p1 {
+    padding: 20px !important;
+  }
+
+  h1 {
+    font-size: 38px !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+  }
+
+  body {
+    section.offers {
+      padding: 20px;
+      background-position: 55% !important;
+    }
+
+    section.features {
+      justify-content: space-between;
+
+      div.feature_box {
+        width: 155px;
+        margin: 0 0 15px 0;
+      }
+    }
+
+    section.products {
+      div.product_list_container {
+        div.product {
+          width: 100%;
+        }
+      }
+    }
+
+    section.banner {
+      height: 40vh;
+    }
+
+    section.promos {
+      div.banner_box {
+        height: 40vh;
+        margin-bottom: 20px;
+      }
+    }
+
+    section.season_sales_banner {
+      padding: 0 20px;
+      div.banner_box {
+        width: 100% !important;
+      }
+    }
+    section.newsletter {
+      padding: 40px 20px !important;
+      form {
+        width: 100%;
       }
     }
   }
