@@ -3,12 +3,17 @@
     <%= image_tag ("logo.png"), class: "logo" , alt: "logo" %>
   </a>
   <nav>
-    <ul>
+    <ul class="header_navigation">
+      <a href="#" id="close_header_navigation"><i class="fa-solid fa-xmark"></i></a>
       <li><a href="" class="active">Home</a></li>
       <li><a href="">Shop</a></li>
       <li><a href="">Blog</a></li>
       <li><a href="">About</a></li>
-      <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+      <li id="header_navigation_cart_logo"><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
     </ul>
   </nav>
+  <div class="mobile">
+    <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+    <i class="fa-solid fa-outdent" id="outdent"></i>
+  </div>
 </header>

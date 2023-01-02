@@ -6,3 +6,4 @@
 //= link shops_index.css
 
 /* JS */
+//= link shops_index.js

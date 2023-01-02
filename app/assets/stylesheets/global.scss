@@ -59,6 +59,10 @@ p {
   margin: 40px 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .normal {
   font-size: 14px;
   font-weight: 600;
@@ -87,40 +91,60 @@ body {
     top: 0;
     left: 0;
 
-    nav ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #close_header_navigation {
+          display: none;
+        }
+
+        li {
+          position: relative;
+          list-style: none;
+          padding: 0 20px;
+
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--back_text);
+            transition: 0.3s ease;
+          }
+          a:hover,
+          a.active {
+            color: var(--secondary_text);
+          }
+
+          a.active::after,
+          a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background-color: var(--secondary_text);
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+          }
+        }
+      }
+      ul.active {
+        right: 0 !important;
+      }
     }
 
-    nav ul li {
-      position: relative;
-      list-style: none;
-      padding: 0 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
+    i {
       color: var(--back_text);
-      transition: 0.3s ease;
     }
 
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: var(--secondary_text);
+    i:hover {
+      cursor: pointer;
     }
 
-    nav ul li a.active::after,
-    nav ul li a:hover::after {
-      content: "";
-      width: 30%;
-      height: 2px;
-      background-color: var(--secondary_text);
-      position: absolute;
-      bottom: -4px;
-      left: 20px;
+    div.mobile {
+      display: none;
     }
   }
 
@@ -157,7 +181,7 @@ body {
       }
 
       a:hover,
-      div.follow i:hover{
+      div.follow i:hover {
         color: var(--secondary_text);
       }
 
@@ -190,6 +214,55 @@ body {
     div.copyright {
       width: 100%;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  header {
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--white);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+        li {
+          margin-bottom: 25px;
+        }
+
+        #header_navigation_cart_logo {
+          display: none;
+        }
+
+        #close_header_navigation {
+          display: initial !important;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          color: var(--black);
+          font-size: 24px;
+        }
+      }
+    }
+
+    div.mobile {
+      display: flex !important;
+      align-items: center;
+
+      i {
+        font-size: 24px;
+        padding-left: 20px;
+      }
     }
   }
 }
