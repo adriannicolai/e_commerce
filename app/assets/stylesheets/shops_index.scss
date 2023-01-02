@@ -351,6 +351,58 @@ body {
     font-size: 15px;
     }
   }
+
+  section.newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: asset_url("banner/b14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: var(--teal_blue);
+    color: var(--white_clear);
+
+    h4 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray);
+
+      span {
+        color: var(--yellow);
+      }
+    }
+
+    form {
+      display: flex;
+      width: 40%;
+
+      input.email {
+        height: 3.123rem;
+        padding: 0 1.25em;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        outline: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      input.submit {
+        background-color: var(--secondary_text);
+        color: var(--white_clear);
+        white-space: nowrap;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
 }
 
 /* sm-banner = promos

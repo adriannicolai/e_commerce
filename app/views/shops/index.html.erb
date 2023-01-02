@@ -1,138 +1,149 @@
 <%= render partial: "global/header" %>
 
-<section class="offers">
-  <h4>Trade-in-offer</h4>
-  <h2>Super value deals</h2>
-  <h1>On all products</h1>
-  <p>Save more with coupons & up to 70% off!</p>
-  <button>Shop Now</button>
-</section>
+  <section class="offers">
+    <h4>Trade-in-offer</h4>
+    <h2>Super value deals</h2>
+    <h1>On all products</h1>
+    <p>Save more with coupons & up to 70% off!</p>
+    <button>Shop Now</button>
+  </section>
 
-<section class="features section-p1">
-  <div class="feature_box">
-    <%= image_tag "features/f1.png" %>
-    <h6 class="free_shipping">Free Shipping</h6>
-  </div>
+  <section class="features section-p1">
+    <div class="feature_box">
+      <%= image_tag "features/f1.png" %>
+        <h6 class="free_shipping">Free Shipping</h6>
+    </div>
 
-  <div class="feature_box">
-    <%= image_tag "features/f2.png" %>
-      <h6 class="online_order">Online Order</h6>
-  </div>
+    <div class="feature_box">
+      <%= image_tag "features/f2.png" %>
+        <h6 class="online_order">Online Order</h6>
+    </div>
 
-  <div class="feature_box">
-    <%= image_tag "features/f3.png" %>
-      <h6 class="save_money">Save Money</h6>
-  </div>
+    <div class="feature_box">
+      <%= image_tag "features/f3.png" %>
+        <h6 class="save_money">Save Money</h6>
+    </div>
 
-  <div class="feature_box">
-    <%= image_tag "features/f4.png" %>
-      <h6 class="promotions">Promotions</h6>
-  </div>
+    <div class="feature_box">
+      <%= image_tag "features/f4.png" %>
+        <h6 class="promotions">Promotions</h6>
+    </div>
 
-  <div class="feature_box">
-    <%= image_tag "features/f5.png" %>
-      <h6 class="happy_customers">Happy Customers</h6>
-  </div>
+    <div class="feature_box">
+      <%= image_tag "features/f5.png" %>
+        <h6 class="happy_customers">Happy Customers</h6>
+    </div>
 
-  <div class="feature_box">
-    <%= image_tag "features/f6.png" %>
-      <h6 class="support">F24/7 Support</h6>
-  </div>
-</section>
+    <div class="feature_box">
+      <%= image_tag "features/f6.png" %>
+        <h6 class="support">F24/7 Support</h6>
+    </div>
+  </section>
 
-<section class="products section-p1">
-  <h2>Featured Products</h2>
-  <p>Summer Collection: New Modern Designs</p>
+  <section class="products section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection: New Modern Designs</p>
 
-  <div class="product_list_container">
-    <% 8.times do |number| %>
-      <div class="product">
-        <%= image_tag "products/f#{number+1 }.jpg" %>
+    <div class="product_list_container">
+      <% 8.times do |number| %>
+        <div class="product">
+          <%= image_tag "products/f#{number+1 }.jpg" %>
 
-        <div class="description">
-          <span>Addidas</span>
-          <h5>Cartoon Astronaut T-Shirts</h5>
+            <div class="description">
+              <span>Addidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
 
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
 
-          <h4 class="price">$78</h4>
-        </div>
-
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i> </a>
-      </div>
-    <% end %>
-  </div>
-</section>
-
-<section class="banner">
-  <h4>Repair Services</h4>
-  <h2>Up to <span>70%</span> on all T-Shirts</h2>
-  <button class="normal">Explore more</button>
-</section>
-
-<section class="section-p1 products">
-  <h2>New Arrivals</h2>
-  <p>Summer Collection: New Modern Designs</p>
-
-  <div class="product_list_container">
-    <% 8.times do |number| %>
-      <div class="product">
-        <%= image_tag "products/n#{number+1}.jpg" %>
-
-          <div class="description">
-            <span>Addidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <h4 class="price">$78</h4>
             </div>
 
-            <h4 class="price">$78</h4>
-          </div>
-
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i> </a>
-      </div>
-      <% end %>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i> </a>
+        </div>
+        <% end %>
     </div>
-</section>
+  </section>
 
-<section class="section-p1 promos">
-  <div class="banner_box deals_banner">
-    <h4>Crazy Deals</h4>
-    <h2>Buy 1 Get 1 Free!</h2>
-    <span>The best classic dress is on sale at Cara!</span>
-    <button>Learn more</button>
-  </div>
+  <section class="banner">
+    <h4>Repair Services</h4>
+    <h2>Up to <span>70%</span> on all T-Shirts</h2>
+    <button class="normal">Explore more</button>
+  </section>
 
-  <div class="banner_box season_collection_banner">
-    <h4>Spring/Summer</h4>
-    <h2>Upcoming season</h2>
-    <span>The best classic dress is on sale at Cara!</span>
-    <button>Collection</button>
-  </div>
-</section>
+  <section class="section-p1 products">
+    <h2>New Arrivals</h2>
+    <p>Summer Collection: New Modern Designs</p>
 
-<section class="season_sales_banner">
-  <div class="banner_box season_sale_banner">
-    <h2>Season Sale</h2>
-    <h3>Winter Collection -50% off</h3>
-  </div>
-  <div class="banner_box footwear_sale_banner">
-    <h2>New Footwear Collection</h2>
-    <h3>Spring/Summer 2023</h3>
-  </div>
-  <div class="banner_box trendy_prints_banner">
-    <h2>T-Shirts</h2>
-    <h3>New Trendy Prints</h3>
-  </div>
-</section>
+    <div class="product_list_container">
+      <% 8.times do |number| %>
+        <div class="product">
+          <%= image_tag "products/n#{number+1}.jpg" %>
+
+            <div class="description">
+              <span>Addidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+
+              <h4 class="price">$78</h4>
+            </div>
+
+            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i> </a>
+        </div>
+        <% end %>
+    </div>
+  </section>
+
+  <section class="section-p1 promos">
+    <div class="banner_box deals_banner">
+      <h4>Crazy Deals</h4>
+      <h2>Buy 1 Get 1 Free!</h2>
+      <span>The best classic dress is on sale at Cara!</span>
+      <button>Learn more</button>
+    </div>
+
+    <div class="banner_box season_collection_banner">
+      <h4>Spring/Summer</h4>
+      <h2>Upcoming season</h2>
+      <span>The best classic dress is on sale at Cara!</span>
+      <button>Collection</button>
+    </div>
+  </section>
+
+  <section class="season_sales_banner">
+    <div class="banner_box season_sale_banner">
+      <h2>Season Sale</h2>
+      <h3>Winter Collection -50% off</h3>
+    </div>
+    <div class="banner_box footwear_sale_banner">
+      <h2>New Footwear Collection</h2>
+      <h3>Spring/Summer 2023</h3>
+    </div>
+    <div class="banner_box trendy_prints_banner">
+      <h2>T-Shirts</h2>
+      <h3>New Trendy Prints</h3>
+    </div>
+  </section>
+
+  <section class="section-p1 newsletter">
+    <div class="news_text">
+      <h4>Sign up for our newsletter</h4>
+      <p>Get email updates about our latest <span>special offers.</span></p>
+    </div>
+    <form action="#" method="post">
+      <input type="email" name="email" class="email" placeholder="Enter your email address." />
+      <input type="submit" class="submit normal" value="Sign up">
+    </form>
+  </section>
