@@ -38,46 +38,46 @@ body {
     flex-wrap: wrap;
 
     div.feature_box {
-        width: 180px;
-        text-align: center;
-        padding: 25px 15px;
-        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-        border: solid 1px var(--border);
+      width: 180px;
+      text-align: center;
+      padding: 25px 15px;
+      box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+      border: solid 1px var(--border);
+      border-radius: 4px;
+      margin: 15px 0;
+
+      h6 {
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
         border-radius: 4px;
-        margin: 15px 15px;
-
-        h6 {
-            display: inline-block;
-            padding: 9px 8px 6px 8px;
-            line-height: 1;
-            border-radius: 4px;
-            color: var(--secondary_text);
-          }
-
-          h6.free_shipping {
-            background-color: #d1e8f2;
-          }
-
-          h6.online_order {
-            background-color: #fddde4;
-          }
-
-          h6.save_money {
-            background-color: #cdebbc;
-          }
-
-          h6.promotions {
-            background-color: #73c2fb;
-          }
-
-          h6.happy_customers {
-            background-color: #cdd4f8;
-          }
-
-          h6.support {
-            background-color: #fff2e5;
-          }
+        color: var(--secondary_text);
       }
+
+      h6.free_shipping {
+        background-color: #d1e8f2;
+      }
+
+      h6.online_order {
+        background-color: #fddde4;
+      }
+
+      h6.save_money {
+        background-color: #cdebbc;
+      }
+
+      h6.promotions {
+        background-color: #73c2fb;
+      }
+
+      h6.happy_customers {
+        background-color: #cdd4f8;
+      }
+
+      h6.support {
+        background-color: #fff2e5;
+      }
+    }
 
     div.feature_box:hover {
       box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
@@ -105,16 +105,16 @@ body {
       }
 
       div.product {
-          width: 23%;
-          min-width: 250px;
-          padding: 10px 12px;
-          border: 1px solid var(--border);
-          border-radius: 25px;
-          cursor: pointer;
-          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-          margin: 15px 0;
-          transition: 0.2s ease;
-          position: relative;
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
 
         div.description {
           text-align: start;
@@ -192,7 +192,7 @@ body {
   }
 
   section.banner,
-  section.promos div.banner_box{
+  section.promos div.banner_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -206,7 +206,9 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    h2, h4, span {
+    h2,
+    h4,
+    span {
       color: var(--white_clear);
     }
 
@@ -240,16 +242,16 @@ body {
       padding: 30px;
 
       > button {
-          font-size: 13px;
-          font-weight: 600;
-          padding: 11px 18px;
-          color: var(--white_clear);
-          background-color: transparent;
-          cursor: pointer;
-          border: 1px solid var(--white_clear);;
-          outline: none;
-          transition: 0.2s;
-        }
+        font-size: 13px;
+        font-weight: 600;
+        padding: 11px 18px;
+        color: var(--white_clear);
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid var(--white_clear);
+        outline: none;
+        transition: 0.2s;
+      }
 
       > button:hover {
         background-color: var(--secondary_text);
@@ -297,9 +299,9 @@ body {
     }
 
     h3 {
-    color: var(--red_text);
-    font-weight: 800;
-    font-size: 15px;
+      color: var(--red_text);
+      font-weight: 800;
+      font-size: 15px;
     }
   }
 
@@ -351,6 +353,67 @@ body {
         white-space: nowrap;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .section-p1 {
+    padding: 40px 40px !important;
+  }
+
+  body {
+    section.offers {
+      height: 70vh;
+      padding: 80px;
+      background-position: top 30% right 30%;
+    }
+
+    section.features {
+      justify-content: center;
+
+      div.feature_box {
+        margin: 15px 15px;
+      }
+    }
+
+    section.products {
+      div.product_list_container {
+        justify-content: center !important;
+
+        div.product {
+          margin: 15px;
+        }
+      }
+    }
+
+    section.banner {
+      height: 20vh;
+    }
+
+    section.promos {
+      div.banner_box {
+        min-width: 100% !important;
+        height: 30vh;
+      }
+    }
+
+    section.season_sales_banner {
+      padding: 0 40px;
+
+      div.banner_box {
+        width: 28% !important;
+
+        h2 {
+          line-height: 22px;
+        }
+      }
+    }
+
+    section.newsletter {
+      form {
+        width: 70%;
       }
     }
   }
