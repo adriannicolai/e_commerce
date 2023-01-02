@@ -1,4 +1,10 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable,
+				 :confirmable, :lockable, :trackable
+
 	validates :first_name, :last_name, presence: true
 	validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Invalid Email Pattern" }, uniqueness: { case_sensitive: false }
 	validates :password, presence: true, length: { minimum: 8, message: "Password should be at least 8 characters" }
@@ -7,7 +13,7 @@ class User < ApplicationRecord
 	# Validate first name and last name
 	validates_with UserRegistrationValidator
 
-	enum user_level: %w[admin user]
+	enum user_level: %w[admin user], _suffix: true
 
 	has_many :addresses
 

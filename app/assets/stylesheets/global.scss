@@ -1,58 +1,74 @@
-nav {
-  display: block !important;
-  min-height: 56px;
-  max-height: 56px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'League Spartan', sans-serif;
 }
+
+:root {
+  --black: #222;
+  --back_text: #1a1a1a;
+  --secondary_text: #088178;
+  --green: #465b52;
+  --white: #E3E6F3;
+  --white_clear: #fff;
+  --red: #ef3636;
+  --red_text: #ec544e;
+  --border: #cce7d0;
+  --description_color: #606063;
+  --product_title_color: #1a1a1a;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: var(--black);
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: var(--black);
+}
+
+h4 {
+  font-size: 20px;
+  columns: var(--black);
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--green);
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
 body {
-  .row {
-    padding: 0px;
-
-    .col-2 {
-      justify-content: flex-start !important;
-      padding: 0px;
-      height: calc(100vh - 50px);
-
-      div.admin_navbar_container {
-        height: 100%;
-        width: 180px;
-        background: var(--white);
-
-        ul {
-          height: 100%;
-          border-radius: 0px;
-          border: none;
-
-          li {
-            border: none;
-          }
-
-          li.active {
-            background: var(--white);
-            font-weight: 500;
-            border: none;
-          }
-        }
-      }
-    }
-
-    .col-10 {
-      padding: min(5px, 200px);
-
-      section.admin_content_section {
-        padding: 10px;
-        overflow: hidden;
-        background: var(--gray_100);
-        height: 100%;
-        background: var(--white);
-      }
-    }
-  }
-
-  nav {
-    display: block !important;
-    min-height: 56px;
-    max-height: 56px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  }
+  width: 100%;
 }

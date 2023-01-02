@@ -11,11 +11,12 @@
     <%= stylesheet_link_tag "#{params['controller']}_#{params['action']}", media: 'all' if @is_css_available %>
     <%= javascript_include_tag "#{params['controller']}_#{params['action']}" if @is_js_available %>
     <%= stylesheet_link_tag "global" , media: 'all' %>
+    <script src="https://kit.fontawesome.com/7ef5180ee7.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= render partial: "global/navbar" %>
-    <%= render partial: "global/toast" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
